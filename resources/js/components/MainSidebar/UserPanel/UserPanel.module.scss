@@ -1,0 +1,38 @@
+.user-panel {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #4f5962;
+  white-space: nowrap;
+}
+
+.info {
+  display: inline-block;
+  overflow: hidden;
+  padding: 5px 5px 5px 10px;
+  white-space: nowrap;
+}
+
+.name {
+  color: #c2c7d0;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.image {
+  width: 2.1rem;
+  max-width: 2.1rem;
+  height: auto;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image-container {
+  display: inline-block;
+  margin-left: 0.8rem;
+}

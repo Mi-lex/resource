@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.title {
+  margin-top: 0;
+  color: inherit;
+
+  &--medium {
+    font-size: 1.5rem;
+  }
+}

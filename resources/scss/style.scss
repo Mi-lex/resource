@@ -1,0 +1,54 @@
+// Bootstrap
+@import "~bootstrap/scss/bootstrap-grid";
+// GLobals
+@import "./shared/variables";
+@import "./shared/mixins";
+@import "./globals/fonts";
+@import "./globals/normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $page-font-size;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  color: $page-font-color;
+
+  font-family: $page-font;
+  font-size: $page-font-size;
+  font-weight: normal;
+  line-height: $page-line-height;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+
+  clip-path: inset(100%);
+
+  white-space: nowrap;
+}

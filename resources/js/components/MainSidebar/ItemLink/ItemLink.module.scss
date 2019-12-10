@@ -1,0 +1,40 @@
+.link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.2rem;
+  border-radius: 0.25rem;
+
+  color: #c2c7d0;
+
+  line-height: 1.5;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #007bff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .sliding-text {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.icon-container {
+  display: inline-block;
+  width: 1.6rem;
+  margin-right: 0.2rem;
+  text-align: center;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
