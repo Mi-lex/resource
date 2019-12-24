@@ -1,0 +1,1 @@
+export const getIsLayoutOpen = state => state.isLayoutOpen

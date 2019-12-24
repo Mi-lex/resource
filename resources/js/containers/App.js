@@ -1,22 +1,17 @@
-import React, { useState } from 'react'
-import Aux from './HOC'
+import React from 'react'
 import MainLayout from './MainLayot'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Content from '../components/Content'
+import { Provider } from 'react-redux'
+import store from '../redux/store/configureStore'
 
 export default function App() {
-  const [isLayoutOpen, toggleAside] = useState(false);
-
-  const toggleAction = () => {
-      toggleAside(!isLayoutOpen)
-  } 
-
   return (
-    <Aux>
+    <Provider store={store}>
       <Router>
-        <MainLayout isLayoutOpen={isLayoutOpen} toggleAction={toggleAction}/>
-        <Content isLayoutOpen={isLayoutOpen}>
+        <MainLayout/>
+        <Content>
           <Switch>
             <Route exact path="/public">
               <Home/>	
@@ -24,6 +19,6 @@ export default function App() {
           </Switch>
         </Content>
       </Router>
-    </Aux>
+    </Provider>
   )
 }

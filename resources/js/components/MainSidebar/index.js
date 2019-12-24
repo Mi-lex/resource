@@ -2,8 +2,10 @@ import React from 'react'
 import classes from './MainSidebar.module.scss'
 import Brandlink from './BrandLink'
 import Container from './Container'
+import { connect } from 'react-redux'
+import { getIsLayoutOpen } from '../../redux/selectors'
 
-export default function MainSidebar(props) {
+function MainSidebar(props) {
     const mainSideBarClassName = `${classes['main-sidebar']} ${props.isLayoutOpen ? "" : classes['closed']}`.trim();
 
     return (
@@ -13,3 +15,5 @@ export default function MainSidebar(props) {
         </aside>
     )
 }
+
+export default connect( state => ({ isLayoutOpen: getIsLayoutOpen(state) }) )(MainSidebar) 

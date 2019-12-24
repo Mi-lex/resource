@@ -1,8 +1,11 @@
 import React from 'react'
 import classes from './Content.module.scss'
+import { getIsLayoutOpen } from '../../redux/selectors'
+import { connect } from 'react-redux'
 
-export default function Content(props) {
+function Content(props) {
     const contentClassName = `${classes['content']} ${props.isLayoutOpen ? "" : classes['closed']}`.trim();
+
     return (
         <section className={contentClassName}>
             <div className={classes['wrapper']}>
@@ -11,3 +14,5 @@ export default function Content(props) {
         </section>
     )
 }
+
+export default connect( state => ({ isLayoutOpen: getIsLayoutOpen(state) }) )(Content) 

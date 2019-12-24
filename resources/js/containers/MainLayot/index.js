@@ -3,12 +3,11 @@ import MainHeader from '../../components/MainHeader'
 import MainSidebar from '../../components/MainSidebar'
 import Aux from '../HOC'
 
-export default function MainLayout(props) {
-    console.log(props)
+export default function MainLayout() {
     return (
         <Aux>
-           <MainHeader isLayoutOpen={props.isLayoutOpen} onToggle={props.toggleAction}/> 
-           <MainSidebar isLayoutOpen={props.isLayoutOpen}/>
+           <MainHeader/> 
+           <MainSidebar/>
         </Aux>
     )
 }

@@ -1,3 +1,5 @@
+import { TOGGLE_LAYOUT, CHANGE_TAB } from '../constants'
+
 const initialState = {
     isLayoutOpen: false,
     currentTab: 'initial'

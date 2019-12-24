@@ -1,5 +1,4 @@
-const TOGGLE_LAYOUT = 'TOGGLE_LAYOUT'
-const CHANGE_TAB = 'CHANGE_TAB'
+import { TOGGLE_LAYOUT, CHANGE_TAB } from '../constants'
 
 export const toggleLayout = () => ({
     'type': TOGGLE_LAYOUT
