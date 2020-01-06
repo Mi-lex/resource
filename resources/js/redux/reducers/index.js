@@ -13,6 +13,7 @@ const rootReducer = (state = initialState, action) => {
                 'isLayoutOpen': !state.isLayoutOpen
             }
         case CHANGE_TAB:
+            console.log(action.currentTab)
             return {
                 ...state,
                 'currentTab': action.currentTab

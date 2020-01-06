@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-left: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+.item {
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
+  &--active {
+    border-top: 3px solid #343a40;
+  }
+
+  &--left {
+    margin-right: auto;
+  }
+}
+
+.btn {
+  padding: 1rem 1rem;
+  border: none;
+
+  background-color: transparent;
+
+  &:hover {
+    color: #007bff;
+  }
+}

@@ -3,6 +3,12 @@ import ContentHeader from '../../components/ContentHeader'
 import Emblems from '../../components/Emblems'
 import Aux from '../HOC'
 import RussianMap from '../../components/RussianMap'
+import MainTabs from '../../components/MainTabs'
+import { miltaryDistricts } from '../../constants'
+
+const districtsArray = Object.keys(miltaryDistricts)
+const firstHalfDistricts = districtsArray.slice(0, 3)
+const secondHalfDistricts = districtsArray.slice(3)
 
 export default function Home() {
 return (
@@ -11,7 +17,7 @@ return (
 		<div className="row">
 			<div className="col-2">
 				<Emblems>
-					{['svo', 'zvo', 'uvo']}
+					{firstHalfDistricts}
 				</Emblems>
 			</div>
 			<div className="col">
@@ -19,9 +25,10 @@ return (
 			</div>
 			<div className="col-2">
 				<Emblems>
-					{['cvo', 'vvo']}
+					{secondHalfDistricts}
 				</Emblems>
 			</div>
 		</div>			
+		<MainTabs/>	
 	</Aux>)
 }
