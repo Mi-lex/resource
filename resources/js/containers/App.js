@@ -13,7 +13,7 @@ export default function App() {
         <MainLayout/>
         <Content>
           <Switch>
-            <Route exact path="/public">
+            <Route exact path="/">
               <Home/>	
             </Route>	
           </Switch>

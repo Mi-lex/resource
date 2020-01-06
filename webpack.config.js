@@ -6,7 +6,7 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 
-const OUTPUT_FOLDER = 'public';
+const OUTPUT_FOLDER = 'docs';
 const ENTRY_FOLDER = 'resources';
 
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -159,6 +159,17 @@ const config = {
                     'img-loader'
                 ],
             },
+            // {
+            //     test: /\.html$/,
+            //     use: [
+            //         { 
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]'
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
 
