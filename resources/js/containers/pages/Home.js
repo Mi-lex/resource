@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ContentHeader from '../../components/ContentHeader'
 import Emblems from '../../components/Emblems'
-import Aux from '../HOC'
 import RussianMap from '../../components/RussianMap'
 import MainTabs from '../../components/MainTabs'
 import { miltaryDistricts } from '../../constants'
@@ -12,7 +11,7 @@ const secondHalfDistricts = districtsArray.slice(3)
 
 export default function Home() {
 return (
-	<Aux>
+	<Fragment>
 		<ContentHeader>Вооруженный Силы Российской Федерации</ContentHeader>
 		<div className="row">
 			<div className="col-2">
@@ -30,5 +29,5 @@ return (
 			</div>
 		</div>			
 		<MainTabs/>	
-	</Aux>)
+	</Fragment>)
 }
