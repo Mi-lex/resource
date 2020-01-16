@@ -4,10 +4,16 @@
             "@babel/env",
             {
                 "targets": "> 1%, not dead",
-                "useBuiltIns": "usage"
+                "useBuiltIns": "usage",
+                "corejs": { "version": 3 }
             }
         ],
-        "@babel/preset-react"
+        [ 
+            "@babel/preset-react",
+            {
+                "corejs": { "version": 3 }
+            }
+        ]
     ],
     "plugins": [
         "@babel/plugin-proposal-class-properties"
