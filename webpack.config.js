@@ -75,7 +75,7 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /\.js(x)?$/,
+				test: /\.js|jsx$/,
 				exclude: [path.resolve(__dirname, './node_modules')],
 				use: [require.resolve('babel-loader')],
 				enforce: 'pre',
