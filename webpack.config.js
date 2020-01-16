@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const postcssFlexbugsFixer = require('postcss-flexbugs-fixes');
 const postcssPresetEnv = require('postcss-preset-env');
+const sassLoaderResources = require('./resources/scss/utils.js');
 
 const OUTPUT_FOLDER = 'docs';
 const ENTRY_FOLDER = 'resources';
@@ -73,10 +74,13 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.js(x)?$/,
 				exclude: [path.resolve(__dirname, './node_modules')],
 				use: [require.resolve('babel-loader')],
 				enforce: 'pre',
+				resolve: {
+					extensions: ['.js', '.jsx'],
+				},
 			},
 			{
 				test: /\.s[ac]ss$/,
@@ -86,10 +90,7 @@ const config = {
 					{
 						loader: 'sass-resources-loader',
 						options: {
-							resources: require(path.join(
-								process.cwd(),
-								`${ENTRY_FOLDER}/scss/utils.js`,
-							)),
+							resources: sassLoaderResources,
 						},
 					},
 				]),
@@ -108,10 +109,7 @@ const config = {
 						{
 							loader: 'sass-resources-loader',
 							options: {
-								resources: require(path.join(
-									process.cwd(),
-									`${ENTRY_FOLDER}/scss/utils.js`,
-								)),
+								resources: sassLoaderResources,
 							},
 						},
 					],
@@ -163,17 +161,6 @@ const config = {
 					'img-loader',
 				],
 			},
-			// {
-			//     test: /\.html$/,
-			//     use: [
-			//         {
-			//             loader: 'file-loader',
-			//             options: {
-			//                 name: '[name].[ext]'
-			//             }
-			//         }
-			//     ]
-			// }
 		],
 	},
 
