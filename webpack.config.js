@@ -1,12 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const postcssFlexbugsFixer = require('postcss-flexbugs-fixes');
 const postcssPresetEnv = require('postcss-preset-env');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const sassLoaderResources = require('./resources/scss/utils.js');
 
 const OUTPUT_FOLDER = 'docs';
@@ -166,6 +167,9 @@ const config = {
 
 	plugins: [
 		new SpriteLoaderPlugin(),
+		new HtmlWebpackPlugin({
+			template: `${ENTRY_FOLDER}/index.html`,
+		}),
 		new MiniCssExtractPlugin({
 			// Options similar to the same options in webpackOptions.output
 			// both options are optional
@@ -196,9 +200,13 @@ module.exports = (env, argv) => {
 		);
 
 		// Minimizing
-		config.optimization.minimizer.push(new UglifyJsPlugin());
+		config.optimization.minimizer.push();
 
-		config.devtool = 'source-map';
+		config.optimization = {
+			minimizer: [
+				new UglifyJsPlugin(),
+			],
+		};
 	}
 
 	return config;
