@@ -1,8 +1,5 @@
-const path = require("path");
+const path = require('path');
 
-const resources = [
-  "./shared/_variables.scss",
-  "./shared/_mixins.scss"
-];
+const resources = ['./shared/_variables.scss', './shared/_mixins.scss'];
 
-module.exports = resources.map(file => path.resolve(__dirname, file));
+module.exports = resources.map((file) => path.resolve(__dirname, file));
