@@ -28,7 +28,9 @@
             "ignoredNodes": ["JSXElement", "JSXElement > *", "JSXAttribute", "JSXIdentifier", "JSXNamespacedName", "JSXMemberExpression", "JSXSpreadAttribute", "JSXExpressionContainer", "JSXOpeningElement", "JSXClosingElement", "JSXText", "JSXEmptyExpression", "JSXSpreadChild"]
         }],
         "react/jsx-indent": ["error", "tab"],
+        "react/jsx-indent-props": ["error", "tab"],
         "no-tabs": 0,
+        "no-shadow": "off",
         "no-plusplus": "off"
     }
 }
