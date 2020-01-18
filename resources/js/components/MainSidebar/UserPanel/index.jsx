@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './UserPanel.module.scss';
 import avatar from '../../../../img/miltary-avatar.png';
 import sidebarClasses from '../MainSidebar.module.scss';
@@ -10,9 +11,9 @@ export default function UserPanel() {
 				<img src={avatar} className={classes.image} alt="User" />
 			</div>
 			<div className={`${classes.info} ${sidebarClasses['sliding-text']}`}>
-				<a href="#" className={classes.name}>
+				<Link to="/profile" className={classes.name}>
 					Должностное лицо
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import classes from './MainSidebar.module.scss';
 import Brandlink from './BrandLink';
 import Container from './Container';
@@ -17,6 +18,10 @@ function MainSidebar({ isLayoutOpen }) {
 		</aside>
 	);
 }
+
+MainSidebar.propTypes = {
+	isLayoutOpen: PropTypes.bool.isRequired,
+};
 
 export default connect((state) => ({ isLayoutOpen: getIsLayoutOpen(state) }))(
 	MainSidebar,

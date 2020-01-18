@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classes from '../MainSidebar.module.scss';
 
 const slidingTextStyle = {
@@ -13,3 +14,7 @@ export default function SlidingText({ children }) {
 		</p>
 	);
 }
+
+SlidingText.propTypes = {
+	children: PropTypes.string.isRequired,
+};

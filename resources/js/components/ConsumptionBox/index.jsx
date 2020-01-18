@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faShower,
@@ -65,3 +66,8 @@ export default function ConsumptionBox({ type, children }) {
 		</div>
 	);
 }
+
+ConsumptionBox.propTypes = {
+	type: PropTypes.string.isRequired,
+	children: PropTypes.string.isRequired,
+};

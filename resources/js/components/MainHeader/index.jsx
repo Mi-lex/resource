@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classes from './MainHeader.module.scss';
 import NavBar from './NavBar';
@@ -16,6 +17,10 @@ function MainHeader({ isLayoutOpen }) {
 		</nav>
 	);
 }
+
+MainHeader.propTypes = {
+	isLayoutOpen: PropTypes.bool.isRequired,
+};
 
 export default connect((state) => ({ isLayoutOpen: getIsLayoutOpen(state) }))(
 	MainHeader,

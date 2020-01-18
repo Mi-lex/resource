@@ -1,6 +1,7 @@
 import React from 'react';
 import { SvgLoader, SvgProxy } from 'react-svgmt';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import mapSvg from '../../../img/icons/map.component.svg';
 import classes from './RussianMap.module.scss';
 import { changeTab } from '../../redux/actions';
@@ -35,6 +36,11 @@ function RussianMap({ currentTab, changeTab }) {
 		</SvgLoader>
 	);
 }
+
+RussianMap.propTypes = {
+	currentTab: PropTypes.string.isRequired,
+	changeTab: PropTypes.func.isRequired,
+};
 
 export default connect((state) => ({ currentTab: getCurrentTab(state) }), {
 	changeTab,

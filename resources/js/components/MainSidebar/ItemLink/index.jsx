@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SlidingText from '../SlidingText';
@@ -16,3 +17,12 @@ export default function ItemLink({ to, iconName, children }) {
 		</li>
 	);
 }
+
+ItemLink.propTypes = {
+	to: PropTypes.string.isRequired,
+	iconName: PropTypes.shape({
+		prefix: PropTypes.string,
+		iconName: PropTypes.string,
+	}).isRequired,
+	children: PropTypes.string.isRequired,
+};
