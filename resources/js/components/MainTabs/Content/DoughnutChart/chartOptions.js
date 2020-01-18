@@ -1,7 +1,4 @@
-import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
-
-const options = {
+export default {
 	// Sweep to allow arcs to cover.
 	circumference: 1 * Math.PI,
 	// Starting angle to draw arcs from.
@@ -31,21 +28,3 @@ const options = {
 		display: false,
 	},
 };
-
-const randomInt = (max) => (max * Math.random()).toFixed(1);
-
-const getInitialData = () => ({
-	labels: ['CФ', 'ЮВО', 'ЗВО', 'ЦВО', 'ВВО'],
-	datasets: [
-		{
-			data: Array(5)
-				.fill(null)
-				.map(() => randomInt(1000)),
-			backgroundColor: ['#78b3ff', '#d6a477', '#ff8080', '#b3ff80', '#fec82c'],
-		},
-	],
-});
-
-export default function DoughnutChart() {
-	return <Doughnut data={getInitialData()} options={options} />;
-}
