@@ -8,7 +8,7 @@ export default function NavBar() {
 		<ul className={classes.navbar}>
 			<NavToggler />
 			<Item href="/">Главная</Item>
-			<Item href="/miltary_districts">Военные округи</Item>
+			<Item href="/district">Военные округи</Item>
 		</ul>
 	);
 }

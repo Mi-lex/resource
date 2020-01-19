@@ -5,7 +5,7 @@ import MainLayout from './MainLayot';
 import Content from '../components/Content';
 import store from '../redux/store/configureStore';
 import Home from './pages/Home';
-// import District from './pages/District';
+import District from './pages/District';
 
 export default function App() {
 	return (
@@ -17,9 +17,9 @@ export default function App() {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						{/* <Route exact path="/district">
+						<Route path="/district">
 							<District />
-						</Route> */}
+						</Route>
 					</Switch>
 				</Content>
 			</Router>

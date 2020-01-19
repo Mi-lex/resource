@@ -1,0 +1,80 @@
+.object {
+  &:nth-child(n + 4) {
+    margin-top: 1.5rem;
+  }
+
+  .image-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 200px;
+
+    filter: saturate(0.3);
+
+    &:hover {
+      filter: saturate(1);
+    }
+
+    &--big {
+      height: 250px;
+    }
+  }
+
+  .header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 95%;
+    margin: 0;
+    color: white;
+
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.88);
+  }
+
+  .title {
+    font-weight: 500;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    margin-top: 1rem;
+  }
+
+  .consumptions-list {
+    @include custom-list;
+    padding: 1rem 0.5rem;
+    padding-bottom: 0;
+  }
+
+  .consumption-box:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.info {
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+  &-list {
+    @include custom-list;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-item {
+    font-size: 16px;
+  }
+
+  &-label {
+    font-size: 14px;
+  }
+
+  &-value {
+    display: block;
+    text-align: center;
+  }
+}
