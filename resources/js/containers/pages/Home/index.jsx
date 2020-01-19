@@ -1,9 +1,9 @@
 import React from 'react';
-import ContentHeader from '../../components/ContentHeader';
-import Emblems from '../../components/Emblems';
-import RussianMap from '../../components/RussianMap';
-import MainTabs from '../../components/MainTabs';
-import { miltaryDistricts } from '../../constants';
+import ContentHeader from '../../../components/ContentHeader';
+import Emblems from '../../../components/Emblems';
+import RussianMap from '../../../components/RussianMap';
+import MainTabs from '../../../components/MainTabs';
+import { miltaryDistricts } from '../../../constants';
 
 const districtsArray = Object.keys(miltaryDistricts);
 const firstHalfDistricts = districtsArray.slice(0, 3);
