@@ -164,7 +164,10 @@ const config = {
 			},
 		],
 	},
-
+	devServer: {
+		historyApiFallback: true,
+		contentBase: path.resolve(__dirname, OUTPUT_FOLDER),
+	},
 	plugins: [
 		new SpriteLoaderPlugin(),
 		new HtmlWebpackPlugin({
@@ -182,7 +185,6 @@ const config = {
 		minimizer: [],
 	},
 };
-
 module.exports = (env, argv) => {
 	if (argv.mode === 'production') {
 		// Plagins
