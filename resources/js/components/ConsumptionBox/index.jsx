@@ -68,6 +68,6 @@ export default function ConsumptionBox({ type, children }) {
 }
 
 ConsumptionBox.propTypes = {
-	type: PropTypes.string.isRequired,
+	type: PropTypes.oneOf(['water', 'heat', 'electricity']).isRequired,
 	children: PropTypes.string.isRequired,
 };
